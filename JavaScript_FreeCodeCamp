@@ -1,0 +1,552 @@
+Free Code Camp - JavaScript Certification
+
+-----------JAVASCRIPT-----------
+    Javascript is a programming language that brings interactivity and dynamic behavior to websites.
+
+--------HOW DOES JAVASCRIPT WORK WITH HTML AND CSS?--------
+    While HTML and CSS arre markup languages used to structure content and style elements on a page, JavaScript goes beyond those by enabling more complex functionality, such as handing user input, animating elements, and even building full web applications.
+
+-----------CSS-----------
+    CSS is used to apply styles to the heading, such as making the text green. JavaScript is used to display an alert message when the button is clicked.
+
+-----------HTML-----------
+    HTML provides structure, CSS adds styling, and JavaScript enables behavior, creating a complete and interactive web experience.
+
+-----------QUESTIONS-----------
+1. What role does JavaScript play in web development compared to HTML and CSS? Answer: JavaScript provides interactive functionality and dynamic behavior for the web page.
+
+2. How does Javascript typically interact with HTML and CSS on a webpage? Answer: JavaScript interacts with the page to change content and styles dynamically.
+
+3. Which of the following is true about the relationship between JavaScript, HTML, and CSS? Answer: HTML and CSS are markup languages, while JavaScript is a programming language.
+
+-----------DATA TYPES-----------
+    Data type is the kind of value you store like a number or piece of text.
+
+-----------VARIABLE-----------
+    Variable is a named container that stores a value of a specific data type, allowing you to reference and manipulate it throughout your code. Data types help the program understand the kind of data it's working with, wether it's a number, text, or something else. You might remember in math class working with variables like this:
+
+    x = 2
+    y = 4
+
+    x + y
+
+    You were able to create variables like x and y and then reference those throughout your program and do mathematical operations like addition. It is a similiar concept in programming. You can create your own variable names and assign values to them. These values will be different data types.
+
+-----------NUMBER-----------
+    A Number represents both integers and floating-point values. Examples of integers include 7, 19 and 90.
+
+-----------NUMBER: INTEGERS-----------
+Examples of integers
+console.log(3);
+console.log(5);
+console.log(-67);
+
+-----------NUMBER: FLOATING POINT NUMBER-----------
+    A floating point number is a number with a decimal point. Examples of floating point numbers include 3.14 and 5.2.
+
+Examples of floating point numbers
+console.log(3.14);
+console.log(7.2);
+console.log(-14.5);
+
+-----------STRING-----------
+    A String is a sequence of characters, or text, enclosed in quotes. Oftentimes you will use strings to represent names, labels, alert messages, etc. Here is an example string using double quotes:
+
+console.log("I love to code!");
+console.log('I love to code!');
+
+-----------BOOLEAN-----------
+    A Boolean represents one of two values: true or false. For example, a program might check wether a user is logged in (true) or not (false) and change the page based on that. If the user is logged in, you probably want to show them the dashboard page. Otherwise, you will want to show them the login page.
+
+-----------UNDEFINED-----------
+    Undefined means a variable has been declared but hasn't been given a value yet. You will learn more about this in the next lesson.
+
+-----------NULL-----------
+    Null means the variable has been intentionally set to "nothing" and does not hold any value. We will explore more on how this works in future lessons.
+
+-----------OBJECT-----------
+    An Object is a collection of key-value pairs. Objects are great for grouping related information toguether. You will learn more about how to work with objects in a future module.
+
+{
+    name: "Alice",
+    age: 30
+};
+
+-----------SYMBOL-----------
+    A Symbol is a special type of value in JavaScript that is always unique and cannot be changed. It's often used to create unique labels or identifiers for properties:
+
+Symbol('mySymbol');
+
+-----------BIGINT-----------
+    BigInt is used for very large numbers that exceed the limit of the Number type. In this example, we create a BigInt by adding n at the end of a very large number. 1234567890123456789012345678901234567890n;
+
+-----------QUESTIONS-----------
+1. Which of the folowing is a string data type? Answer: "Hello!"
+2. What data type represents a value that is either true or false? Answer: Boolean
+3. If a variable has been declared but not assigned a value, what is it's data type? Answer: Undefined
+
+-----------WHAT ARE VARIABLES AND THE GUIDELINES FOR NAMING JAVASCRIPT VARIABLES?-----------
+    In JavaScript, variables act as containers for storing data that you can access and modify throughout your program. You can think of variables as boxes that hold values. With variables, you can keep track of things like numbers or text and refer to these values whenever you need them in your program.
+    One way to declare a variable in JavaScript is to use the "let" keyword, for example:
+
+let age;
+
+    Right now, the age variable does not have a value assigned to it. If you try to use it, it will return undefined, which means it has no value. Here is an example:
+
+let age;
+console.log(age);
+>>> undefined
+
+    To assign a value to a variable you will need to use the assignment operator like this:
+
+let age = 25;
+
+    Now when you use the age variable, it will return the value of 25.
+
+let age = 25;
+console.log(age);
+>>> 25
+
+    The assignment operator is used to assign a value to a variable. This process of assigning a value to a variable is known as initialization.
+    One advantage of using the let keyword to declare variables is that you can reassign values to them. In programming, reassignment means giving a new value to a variable that already has one. Here is an example of reassigning the value for the age variable.
+
+let age = 25;
+console.log(age);
+>>> 25
+
+age = 30;
+console.log(age);
+>>> 30
+
+    Now the age variable hold the value of 30. Notice that the let keyword wasn't needed again because the age variable was already declared, so there's no need to declare it a second time.
+    When using reassignment, you only need to reference the variable name. Reassignment is useful because it allows you to update and change the value stored in a variable as your program runs. A good example of this would be updating points in a game.
+
+    Bad variable names:
+let x = 10;
+let y - "John";
+
+    Good variable names:
+let age = 10;
+
+    Variables in JavaScript must begin with a letter, an underscore (_), or a dollar sign ($). They cannot start with a number.
+
+    Valid variable names:
+let age;
+let _score;
+let $total;
+
+    Invalid variable names:
+let 1stPlace; // starts with a number
+
+    Variable names are case-sensitive (meaning the word age in all lowercase and the word Age with a capital A are considered different variables).
+
+let age = 25;
+let Age = 30;
+console.log(age); // 25
+console.log(Age); // 30
+
+    camelCase naming convention:
+let thisIsCamelCase;
+let anotherExampleVariable;
+let freeCodeCampStudents;
+
+    There are certain keywords in JavaScript that you cannot use as variable names, such as let, const, function, or return, as they are reserved for the language itself.
+. Avoid using spelcial characters like exclamation points (!) or at (@) symbols, in your variable names. It is best to keep variable names readable by using letters, numbers, underscores, or dollar signs.
+. By following these guidelines, your code will be cleaner and more manageable as it grows in complexity.
+
+-----------Questions-----------
+1. Which keywoard would you use to declare a variable in JavaScript when you plan to update it's value later? Answer: let
+2. Which of the following is a valid variable name in JavaScript? Answer: Player1Score
+3. Why is it important to use descriptive names for your variables? Answer: Descriptive names make your code easier to understand and maintain.
+
+-----------Let & Const Work Differently In Variable Declaration, Assignment, Reassignment-----------
+    The let keyword allows you to declare variables that can be updated or reassigned later (flexible container).
+
+let score = 10;
+console.log(score);
+>>> 10
+score = 20;
+console.log(score);
+>>> 20
+
+    The const keyword is used to declare variables that are constant. Once you assign a value to a variable declared with const, you cannot reassign it.
+
+const maxScore = 100;
+console.log(maxScore); // 100
+maxScore = 200; // This will result in an error
+
+-----------Questions-----------
+1. What happens if you try to reassign a value to a variable declared with const? Answer: An error will be thrown because const variables cannot be reassigned.
+2. Which of the following is the correct way to assign the number 100 to a constant named maxScore? Answer: const maxScore = 100;
+3. Can you declare a const variable without assigning it a value? Answer: No, const variables must be initialized at the time of declaration.
+
+-----------What's String & String Immuntability-----------
+    String is a sequence of characters used to represent text data. Strings are one of the primitive data types in the language, along with numbers, booleans, null, and undefined. To create a string in JavaScript, you can use single quotes ('), or double quotes ("). Strings are immutable, it means that once something is created, it cannot be changed. If a string starts with a double quote and ends with a single quote, it will throw an error.
+
+let singleQuotes = 'This is a string';
+console.log(singleQuotes);
+let doubleQuotes = "This is also a string";
+console.log(doubleQuotes);
+
+-----------Questions-----------
+1. Which of the following is the correct syntax for creating strings in JavaScript? Answer: const str = "this is a string"
+2. What happens if a string starts with a single quote and ends with a double quote? Answer: It will throw a syntax error.
+3. Why are strings considered immutable in JavaScript? Answer: Once a string is created, you cannot change its characters directly.
+
+-----------STRING CONCATENATION-----------
+    Concatenation is the process of combining pieces of text toguether.
+
+    Concatenation using the the + operator:
+    The simplest and frequently used method. But it can lead to spacing issues if you don't carefully manage the spacing between the concatenated strings.
+
+let firstName = "John";
+let lastName = "Doe";
+
+let fullName = firstName + " " + lastName; 
+console.log(fullName);
+>>> John Doe
+
+
+
+let firstName = "John";
+let lastName = "Doe";
+
+let fullName = firstName + lastName; 
+console.log(fullName);
+>>> "JohnDoe"
+
+    Concatenation using the the += operator:
+    In case of needing to add or append to an existing string.
+
+let greeting = 'Hello';
+greeting += ', John!';
+console.log(greeting);
+>>> Hello, John!
+
+    Concatenation using the the concat() method:
+     A function is a reusable block of code that performs a specific task and can be called with various inputs.
+     A method is a type of function that is associated with an object, meaning it operates on the data contained within that object. For example:
+
+let str1 = 'Hello';
+let str2 = 'World';
+
+let result = str1.concat(' ', str2); 
+console.log(result); // Hello World
+
+-----------Questions-----------
+1. What is the primary use of the + operator in string concatenation? Answer: To join two or more strings together.
+2. Which of the following is the correct way to concatenate strings? Answer: let greeting = "Hi";
+greeting += " there!";
+3. Which of the following is the correct method to concatenate multiple strings? Answer: concat()
+
+-----------console.log-----------
+    console.log displays messages or output information to the browser's console. It's mostly used by developers to debug and inspect code while working on their programs. The console.log() method helps you monitor your code as it runs, making it easier to spot mistakes and understand how your program behaves.
+
+    Example 1
+console.log("Hello, world!");
+
+let num = 5;
+console.log(num); // 5
+
+    Example 2
+let name = "Alice";
+let age = 25;
+console.log("Name:", name, "Age:", age); // Name: Alice Age: 25
+
+-----------Questions-----------
+1. What does the console.log() method do in JavaScript? Answer: It is used to log data and display the output in the browser console.
+2. What will be logged to the console?
+const age = 10;
+console.log(age);
+Answer: 10
+3. Why is console.log() helpful when building out web applications? Answer: It is commonly used by developers for debugging and inspecting values or expressions in their code during development.
+
+-----------Semicolons-----------
+    Semicolons (;) is used to indicate the end of a statement, it helps delineate statements and improve code readability. They mark the end of statements, improve code readability, and help avoid errors related to Automatic Semicolon Insertion.
+
+    Example 1
+let variableOne = 5;  // Declare a variable and assign a value
+let variableTwo = 10; // Declare another variable and assign a value
+
+    Example 2
+let a = 1;   // Statement ends here
+let b = 2;   // Another statement starts here
+
+-----------Questions-----------
+1. What is the primary role of a semicolon in JavaScript? Answer: To mark the end of a statement.
+2. What can happen if semicolons are omitted in JavaScript code? Answer: It can lead to unexpected behavior due to Automatic Semicolon Insertion.
+3. Why is it beneficial to use semicolons explicitly even though JavaScript has Automatic Semicolon Insertion? Answer: To improve code readability and prevent subtle errors.
+
+-----------Comments-----------
+    Comments are lines or blocks of text that are ignored by the JavaScript engine when your code is executed. They are used to provide additional context for the code or leave notes for yourself and others.
+
+    Single-line Comments:
+// I am a single line comment in JavaScript
+
+    Multi-line Comments:
+/*
+ I am a multiline comment.
+ This is helpful for longer explanations.
+*/
+
+-----------Questions-----------
+1. Which of the following correctly creates a single-line comment in JavaScript? Answer: // This is a comment
+2. When would you use a multi-line comment instead of a single-line comment? Answer: When you need to explain a large section of code or provide detailed information.
+3. Which of the following is a good practice when using comments in your code? Answer: Use comments to provide context and leave notes for yourself and other developers.
+
+-----------Build a Greeting Bot (Workshop)-----------
+console.log("Hi there!");
+console.log("I am excited to talk to you.");
+let bot;
+bot = "teacherBot";
+
+let botLocation = "the universe";
+
+console.log("Allow me to introduce myself.");
+
+const botIntroduction = "My name is " + bot + ".";
+console.log(botIntroduction);
+
+const botLocationSentence = "I live in " + botLocation + ".";
+console.log(botLocationSentence);
+
+bot = "professorBot";
+
+const nicknameIntroduction = "My nickname is " + bot + ".";
+console.log(nicknameIntroduction);
+
+bot = "awesomeTeacherBot";
+
+const newNicknameGreeting = "I love my nickname but I wish people would call me " + bot + ".";
+console.log(newNicknameGreeting);
+
+const favoriteSubject = "Computer Science";
+
+const favoriteSubjectSentence = "My favorite subject is " + favoriteSubject + ".";
+console.log(favoriteSubjectSentence);
+
+console.log("Well, it was nice to talk to you. Have a nice day!");
+
+-----------Build a JavaScript Trivia Bot (Lab)-----------
+console.log("Hello! I'm your coding fun fact guide!");
+
+let botName = "Jonathan";
+let botLocation = "Canada";
+let favoriteLanguage = "Russian";
+
+console.log("My name is " + botName + " and I live on " + botLocation + ".");
+console.log("My favorite programming language is " + favoriteLanguage + ".");
+
+let codingFact = "Coding may seem like a hard " + favoriteLanguage + " alphabet, but it's get easier over time.";
+
+console.log(codingFact);
+
+codingFact = "And that's okay! Because each time I learn more about the " + favoriteLanguage + " alphabet, the more I enjoy it.";
+
+console.log(codingFact);
+
+codingFact = "I hope we could speak some more either in English or " + favoriteLanguage + " in the future! :D";
+
+console.log(codingFact);
+
+console.log("It was fun sharing these facts with you. Goodbye! - " + botName + " from " + botLocation + ".");
+
+-----------Build a Setence Maker (Lab)-----------
+let adjective = "clumsy";
+let noun = "fox";
+let verb = "cold";
+let place = "small burrow";
+let adjective2 = "small";
+let noun2 = "blueberries";
+
+let firstStory
+firstStory = "Once upon a time, there was a(n) " + adjective + " " + noun + " who loved to eat " + noun2 + "." + " The " + noun + " lived in a " + place + " and had " + adjective2 + " nostrils that blew fire when it was " + verb + ".";
+
+console.log("First story: " + firstStory);
+
+
+adjective = "fast";
+noun = "elephant";
+verb = "hot";
+place = "big cave";
+adjective2 = "big";
+noun2 = "mangos";
+
+let secondStory
+secondStory = "Once upon a time, there was a(n) " + adjective + " " + noun + " who loved to eat " + noun2 + "." + " The " + noun + " lived in a " + place + " and had " + adjective2 + " nostrils that blew fire when it was " + verb + ".";
+
+console.log("Second story: " + secondStory);
+
+-----------JV Variables & Data Types Review-----------
+    Data types help the program understand the kind of data it's working with, whether it's a number, text, or something else.
+    Number: A number represents both integers and floating-point values. Examples of integers include 7, 19, and 90.
+    Floating point: A floating point number is a number with a decimal point. Examples include 3.14, 0.5, and 0.0001.
+    String: A string is a sequence of characters, or text, enclosed in quotes. "I like coding" and 'JavaScript is fun' are examples of strings.
+    Boolean: A boolean represents one of two possible values: true or false. You can use a boolean to represent a condition, such as isLoggedIn = true.
+    Undefined and Null: An undefined value is a variable that has been declared but not assigned a value. A null value is an empty value, or a variable that has intentionally been assigned a value of null.
+    Object: An object is a collection of key-value pairs. The key is the property name, and the value is the property value.
+    Symbol: The Symbol data type is a unique and immutable value that may be used as an identifier for object properties.
+    BigInt: When the number is too large for the Number data type, you can use the BigInt data type to represent integers of arbitrary length.
+
+    Example 1 (Variables)
+let pet = {
+  name: "Fluffy",
+  age: 3,
+  type: "dog"
+};
+
+    Example 2 (Symbol)
+const crypticKey1= Symbol("saltNpepper");
+const crypticKey2= Symbol("saltNpepper");
+console.log(crypticKey1 === crypticKey2); // false
+
+    Example 3 (BigInt)
+const veryBigNumber = 1234567890123456789012345678901234567890n;
+
+    Variables in JavaScript can be declared using the let keyword.
+
+let cityName;
+
+    To assign a value to a variable, you can use the assignment operator =.
+
+cityname = "New York";
+
+    Variables declared using let can be reassigned a new value.
+
+let cityName = "New York";
+cityName = "Los Angeles";
+console.log(cityName); // Los Angeles
+
+    Apart from let, you can also use const to declare a variable. However, a const variable cannot be reassigned a new value.
+
+const cityName = "New York";
+cityName = "Los Angeles"; // TypeError: Assignment to constant variable.
+
+    Variables declared using const find uses in declaring constants, that are not allowed to change throughout the code, such as PI or MAX_SIZE.
+
+Variable Naming Conventions
+    Variable names should be descriptive and meaningful.
+    Variable names should be camelCase like cityName, isLoggedIn, and veryBigNumber.
+    Variable names should not start with a number. They must begin with a letter, _, or $.
+    Variable names should not contain spaces or special characters, except for _ and $.
+    Variable names should not be reserved keywords.
+    Variable names are case-sensitive. age and Age are different variables.
+
+Strings and String immutability in JavaScript
+    Strings are sequences of characters enclosed in quotes. They can be created using single quotes and double quotes.
+
+let correctWay = 'This is a string';
+let alsoCorrect = "This is also a string";
+
+    Strings are immutable in JavaScript. This means that once a string is created, you cannot change the characters in the string. However, you can still reassign strings to a new value.
+
+let firstName = "John";
+firstName = "Jane"; // Reassigning the string to a new value
+
+String Concatenation in JavaScript
+    Concatenation is the process of joining multiple strings or combining strings with variables that hold text. The + operator is one of the simplest and most frequently used methods to concatenate strings.
+
+let studentName = "Asad";
+let studentAge = 25;
+let studentInfo = studentName + " is " + studentAge + " years old.";
+console.log(studentInfo); // Asad is 25 years old.
+
+    If you need to add or append to an existing string, then you can use the += operator. This is helpful when you want to build upon a string by adding more text to it over time.
+
+let message = "Welcome to programming, ";
+message += "Asad!";
+console.log(message); // Welcome to programming, Asad!
+
+    Another way you can concatenate strings is to use the concat() method. This method joins two or more strings together.
+
+let firstName = "John";
+let lastName = "Doe";
+let fullName = firstName.concat(" ", lastName);
+console.log(fullName); // John Doe
+
+Logging Messages with console.log()
+    The console.log() method is used to log messages to the console. It's a helpful tool for debugging and testing your code.
+
+console.log("Hello, World!");
+// Output: Hello, World!
+
+Semicolons in JavaScript
+    Semicolons are primarily used to mark the end of a statement. This helps the JavaScript engine understand the separation of individual instructions, which is crucial for correct execution.
+
+let message = "Hello, World!"; // first statement ends here
+let number = 42; // second statement starts here
+
+    Semicolons help prevent ambiguities in code execution and ensure that statements are correctly terminated.
+
+Comments in JavaScript
+    Any line of code that is commented out is ignored by the JavaScript engine. Comments are used to explain code, make notes, or temporarily disable code.
+    Single-line comments are created using //.
+
+// This is a single-line comment and will be ignored by the JavaScript engine
+
+    Multi-line comments are created using /* to start the comment and */ to end the comment.
+
+/*
+This is a multi-line comment.
+It can span multiple lines.
+*/
+
+JavaScript as a Dynamically Typed Language
+    JavaScript is a dynamically typed language, which means that you don't have to specify the data type of a variable when you declare it. The JavaScript engine automatically determines the data type based on the value assigned to the variable.
+
+let error = 404; // JavaScript treats error as a number
+error = "Not Found"; // JavaScript now treats error as a string
+
+    Other languages, like C#, that are not dynamically typed would result in an error:
+
+int error = 404; // value must always be an integer
+error = "Not Found"; // This would cause an error in C#
+
+Using the typeof Operator
+    The typeof operator is used to check the data type of a variable. It returns a string indicating the type of the variable.
+
+let age = 25;
+console.log(typeof age); // "number"
+
+let isLoggedIn = true;
+console.log(typeof isLoggedIn); // "boolean"
+
+    However, there's a well-known quirk in JavaScript when it comes to null. The typeof operator returns "object" for null values.
+
+let user = null;
+console.log(typeof user); // "object"
+
+-----------JV Variables & Data Types Quiz-----------
+1. Which of the following best describes JavaScript? Answer: A programming language used for web development.
+2. Which of the following is NOT a JavaScript data type? Answer: Double
+3. Which of the following is NOT a valid JavaScript variable declaration? Answer: public Int x;
+4. Which of the following is a common naming convention for variables in JavaScript? Answer: Camel case.
+5. What is the difference between let and const variable declarations in JavaScript? Answer: const cannot be re-assigned nor re-declared. let can be re-assigned and re-declared.
+6. Why are strings considered immutable in JavaScript? Answer: Once a string is created, you cannot change its characters directly.
+7. How would you print out the string Hello, world! in the console in JavaScript? Answer: console.log("Hello, world!");
+8. What does the code below do?
+let hello = "Hello";
+hello += " world";
+console.log(hello);
+
+Answer: Combines the current value of hello with the string " world", reassigns it to hello, and prints it to the console.
+
+9. Which JavaScript character is used to mark the end of a statement? Answer: ;
+10. Which of the following is a valid single line comment syntax in JavaScript? Answer: // This is a single line comment
+11. Dynamic typing in JavaScript means that ... Answer: JavaScript infers the type based on the value assigned to the variable.
+12. Which of the following prints out the type of the variable x in the console? Answer: console.log(typeof x);
+---13. What will be the output of console.log(typeof null);? Answer: "object"
+14. Which of the following is a valid multi-line comment in JavaScript? Answer:
+/*
+This is a
+multi-line
+comment
+*/
+
+15. Which of the following declares a variable in JavaScript that cannot be changed? Answer: const x = 0;
+16. Which of the following is a valid variable name in JavaScript? Answer: $number
+17. Which of the following is NOT a valid string concatenation method in JavaScript? Answer: console.log(string1 string2);
+18. Which of the following variable names uses camel case correctly? Answer: aLongVariableName
+19. Why is it beneficial to use semicolons explicitly even though JavaScript has Automatic Semicolon Insertion? Answer: To improve code readability and reliability.
+20. Which of the following is NOT a JavaScript data type? Answer: Float
+
